@@ -4,8 +4,7 @@
     var timer = null;        
     var onBreak = false;     
 
-    
-    function getWorkMinutes() {
+      function getWorkMinutes() {
       var value = parseInt(document.getElementById("workInput").value);
       if (isNaN(value) || value < 1) {
         value = 1;
@@ -13,39 +12,32 @@
       return value;
     }
 
-  
     function getBreakMinutes() {
       var value = parseInt(document.getElementById("breakInput").value);
       if (isNaN(value) || value < 1) {
         value = 1;
       }
-      
+        
     function updateDisplay() {
       var minText = minutes;
-      var secText = seconds;
-
-      
+      var secText = seconds;    
       if (minutes < 10) {
         minText = "0" + minutes;
       }
       if (seconds < 10) {
         secText = "0" + seconds;
       }
-
       document.getElementById("timeText").innerHTML = minText + ":" + secText;
     }
-
     
     function countDown() {
       if (seconds == 0) {
         if (minutes == 0) {
           if (onBreak == false) {
-            
             onBreak = true;
             minutes = getBreakMinutes();
             seconds = 0;
           } else {
-            
             clearInterval(timer);
             timer = null;
             return;
@@ -59,7 +51,6 @@
       }
       updateDisplay();
     }
-
     
     function startTimer() {
       if (timer == null) {            
@@ -67,13 +58,11 @@
       }
     }
 
-    
     function pauseTimer() {
       clearInterval(timer);
       timer = null;
     }
 
-    
     function resetTimer() {
       clearInterval(timer);
       timer = null;
