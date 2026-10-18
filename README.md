@@ -39,7 +39,7 @@ This app helps you track your work and break sessions.
 
 ## Live Demo
 
-[Deploy on GitHub Pages and add link here]
+https://annabharathin.github.io/PomodoroClock/
 
 ## Author
 
